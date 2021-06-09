@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+    ul {
+        list-style: none;
+    }
+
+    .navbar__item {
+        width: 100px;
+    }
+    .navbar {
+        background: #331B3F;
+        color: #ACC7B4;
+        width: 200px;
+        display: flex;
+        margin: 0 auto;
+    }
+    .navbar a {
+        height: 50px;
+        line-height: 50;
+        text-align: center;
+    }
+    .navbar__menu {
+        
+    }
+    .navbar__submenu {
+        background: #ACC7B4;
+        color: #331B3F;
+    }
+</style>
+</head>
+<body>
+
+    <nav>
+        <ul class="navbar">
+            <li class="navbar__item">
+                <a href="#" class="navbar__menu">menu1</a>
+            </li>
+            <div class="navbar__submenu">
+                <a href="#">sub-menu1</a>
+                <a href="#">sub-menu2</a>
+                <a href="#">sub-menu3</a>
+                <a href="#">sub-menu4</a>
+            </div>
+            <li class="navbar__item">
+                <a href="#" class="navbar__menu">menu1</a>
+            </li>
+            <div class="navbar__submenu">
+                <a href="#">sub-menu1</a>
+                <a href="#">sub-menu2</a>
+                <a href="#">sub-menu3</a>
+                <a href="#">sub-menu4</a>
+            </div>
+            <li class="navbar__item">
+                <a href="#" class="navbar__menu">menu1</a>
+            </li>
+            <div class="navbar__submenu">
+                <a href="#">sub-menu1</a>
+                <a href="#">sub-menu2</a>
+                <a href="#">sub-menu3</a>
+                <a href="#">sub-menu4</a>
+            </div>
+        </ul>
+    </nav>
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+
+        // 초기 상태 세팅
+        var $submenu = $('.navbar__submenu');
+        var $navbarItem = $('.navbar__item')
+        $submenu.hide();
+
+        // 마우스가 왔을때 submenu가 보여라
+        navItem = $(this).children('navber__submenu');
+            $(this).children('navber__subemnu').slideDown();
+        })
+        $navbarItem.mouseleave(function(){
+            $(this).children('navber__subemnu').slideUp();
+        })
+
+    </script>
+</body>
+</html>

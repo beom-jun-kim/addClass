@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+</head>
+<body>
+    
+
+    <button>click!!</button>
+    <div class="container">
+        <h1 id="title">title</h1>
+        <p class="desc">Lorem ipsum dolor sit amet.</p>
+        <h2>heading2</h2>
+        <h2>heading2</h2>
+        <h2>heading2</h2>
+        <h2>heading2</h2>
+    </div>
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+        var $button = $('button');
+        // console.log($button);
+
+        // var $container = $('.container');
+        // console.log($container);
+
+        // var $title = $('#title');
+        // console.log($title);
+
+
+        // css자식 선택자를 넘길 수 있다
+
+        var $title = $('.container h1');
+        // console.log($title);
+
+        // children 메서드 사용
+        // var $container = $('.container').children('.desc');
+        // console.log($container);
+
+        // var $desc = $('.desc');
+        // var $descPrev = $desc.prev();
+        // var $descNext = $desc.next();
+
+        var $h2 = $('h2');
+        console.log($h2);
+
+        $button.click(function(){
+            // $container.css('color' , 'red');
+            // $title.css('font-size' , '5rem');
+
+            // $descPrev.css('color' , 'blue');
+            // $descNext.css('color' , 'gold');
+
+            $h2.eq(0).css('color' , 'red');
+            $h2.eq(1).css('color' , 'coral');
+            $h2.eq(2).css('color' , 'green');
+            $h2.eq(3).css('color' , 'yellow');
+        })
+
+    </script>
+</body>
+</html>

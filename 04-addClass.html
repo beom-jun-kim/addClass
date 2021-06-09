@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<style>
+    .desc {
+        background: darkblue;
+        color: #999;
+        padding: 2rem;
+    }
+    .dark {
+        background: #111;
+    }
+</style>
+</head>
+<body>
+    <div class="contral">
+        <button id="btnAdd">add</button>
+        <button id="btnRemove">remove</button>
+        <button id="btnAToggle">toggle</button>
+    </div>
+    <p class="desc">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa repellat libero vel magnam similique aliquid laborum, dolores doloremque deleniti ea facere inventore voluptatum. Omnis, odio ea harum esse ipsam sunt.
+    </p>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        var $btnAdd = $('#btnAdd'),
+            $btnRemove = $('#btnRemove'),
+            $btnToggle = $('#btnToggle'),
+            $desc = $('.desc');
+
+        // add event
+        $btnAdd.click(function(){
+            $desc.addClass('dark');
+        })
+
+        // remove event
+        $btnRemove.click(function(){
+            $desc.removeClass('dark');
+        })
+        console.log('>>>>>>>>');
+        console.log(this);
+        console.log('>>>>>>>>');
+
+        // toggle event
+        $btnToggle.click(function(){
+            console.log(this);
+            $(this).toggleClass('dark'); 
+        })
+
+    </script>
+
+
+</body>
+</html>
